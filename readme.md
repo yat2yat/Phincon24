@@ -22,3 +22,8 @@ Other Command
 | Command GIT     | comment       |
 | -------------   | ------------- |
 | `Git checkout`     | to navigate or swith between the branch |
+| git clean      | we can used this to undo untracked file, so we can remove using it  |
+| `git commit --amend`     | add or remove changes from the Git staging area to apply with a --amend commit. |
+| `Git fetch`     | download other repo, but not save in our locak repository |
+| git merge      | to merge some branch, and bring it together again  |
+| `Git pull`     | download branch from repo, then immediate to merge with current branch |
