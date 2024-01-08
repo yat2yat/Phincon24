@@ -17,3 +17,8 @@ Getting and Inizialization project
 | git commit -m "[commit message]"      | commit and giving message  |
 | `git push`     | push change to remote repository (based previous branch) |
 | `git branch`     | to see branch  |
+
+Other Command 
+| Command GIT     | comment       |
+| -------------   | ------------- |
+| `Git checkout`     | to navigate or swith between the branch |
