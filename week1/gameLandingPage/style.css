@@ -1,0 +1,32 @@
+header {
+    background-color: blue;
+    color: white;
+    flex-direction: row;
+    justify-content: center;
+    opacity: 0.5;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+ nav ul {
+    float: right;
+ }
+ .logos {
+    padding-left: 2.5rem;
+ }
+ .l-nav {
+    padding-left: 8rem;
+ }
+ .r-nav {
+    padding-left: 26rem;
+ }
+
+ .section1 {
+    background-image: url("./assets/img-1.jpg");
+    height: 90rem;
+    width: 100%;
+    background-size: auto 70%;
+    background-repeat: no-repeat;
+}

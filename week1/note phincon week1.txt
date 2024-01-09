@@ -1,0 +1,38 @@
+step by step 
+
+1. dibagi 60, hasil depannya diambil, terus ditaruh sebagai jam. 
+2. berikan ":"
+3. jika sisa hasil pembagian pertama kurang dari 9, maka tambahkan angka 0 sebelum hasil pembagian tersebut. 
+4. jika sisa hasil pembagian pertama lebih dari 9, maka tidak perlu ditambahkan 0 sebelum hasil pembagian tersebut. 
+5. kemudian sisa hasil pembagian diletakan setelah ":" 
+
+
+string 
+looping 
+counter x o 
+akhirnya disamain jumlahnya 
+-------------------------------
+
+day 2 
+main page 
+- image with background, opacity 
+- navigator, opacity 
+- bikin container buat fornt 
+- button the story 
+
+about and gallery 
+- background image 
+- slider, store image can using json 
+- image at left side 
+
+feature 
+- background opacity 
+- people, z index. left side 
+- feature text, right side 
+
+requirement 
+- top side, text 
+- left side, table. 
+- image bagckground, 
+- some oppacity
+- sircle with more bright 
