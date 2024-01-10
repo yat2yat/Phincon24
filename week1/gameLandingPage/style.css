@@ -79,6 +79,7 @@ h6 {
    text-align: left;
    color: white;
    font-weight: 400;
+   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 button {
@@ -273,5 +274,101 @@ button {
 .tabel :nth-child(2) {
    position: relative;
    left: -150px;
-   top: ;
+}
+.section4 .vl {
+   height: 250.88px;
+   border-left: 0.5px solid white;
+   width: max-content;
+   position: relative;
+   left: 400px;
+   top: -21px;
+}
+.section4 .h2 {
+   width: 572.85px;
+   border-top: 0.5px solid white;
+   position: relative;
+   left: 121.6px;
+   bottom: 150px;
+}
+.section4 .h1 {
+   width: 572.85px;
+   border-top: 0.5px solid white;
+   position: relative;
+   left: 121.6px;
+   bottom: 22px;
+}
+.head-table {
+   width: max-content;
+}
+.head-table :nth-child(1) {
+   position: relative;
+   width: max-content;
+   bottom: 300px;
+   left: 135px;
+}
+.head-table :nth-child(2) {
+   position: relative;
+   width: max-content;
+   bottom: 365px;
+   left: 415px;
+}
+.head-table :nth-child(3) {
+   position: relative;
+   width: max-content;
+   bottom: 300px;
+   left: 135px;
+}
+.head-table :nth-child(4) {
+   position: relative;
+   width: max-content;
+   bottom: 365px;
+   left: 415px;
+}
+.head-table :nth-child(5) {
+   position: relative;
+   width: max-content;
+   bottom: 300px;
+   left: 135px;
+}
+.section4 .content-table {
+   position: relative;
+   bottom: 150px;
+}
+.section4 h6 {
+   width: max-content;
+   height: max-content;
+   position: relative;
+   bottom: 250px;
+   margin: 0px;
+}
+.content-table :nth-child(1) {
+   position: relative;
+   width: max-content;
+   left: 138px;
+   bottom: 470px;
+}
+.content-table :nth-child(2) {
+   position: relative;
+   width: max-content;
+   left: 415px;
+   bottom: 530px;
+}
+
+.content-table :nth-child(3) {
+   position: relative;
+   width: max-content;
+   left: 138px;
+   bottom: 440px;
+}
+.content-table :nth-child(4) {
+   position: relative;
+   width: max-content;
+   left: 415px;
+   bottom: 480px;
+}
+.content-table :nth-child(5) {
+   position: relative;
+   width: max-content;
+   left: 138px;
+   bottom: 390px;
 }
