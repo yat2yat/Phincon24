@@ -1,8 +1,8 @@
 html body {
-   height: 100%;
+   height: 100vh;
    width: 100%;
-   margin: 0px;
-   padding:0px;
+   margin: 0;
+   padding: 0;
    overflow-x: hidden;
 }
 
@@ -14,7 +14,11 @@ header {
    justify-content: center;
    opacity: 0.8;
    height: 90px;
-   width: 1440px;
+   /* width: 1440px; */
+   width: 100%;
+   position: fixed; 
+   top: 0; 
+   z-index: 100; 
 }
 .navbar {
     display: flex;
@@ -37,7 +41,9 @@ header {
  .section1 {
     background-image: url("./assets/image-1-2.jpg");
     background-repeat: no-repeat;
-    width:1440px ;
+    /* width:1440px ; */
+    background-size: cover;
+    width: 100%;
     height: 960px;
     background-position: 0px -1px;
 }
@@ -82,6 +88,7 @@ h6 {
    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+
 button {
    width: 260.36px;
    height: 60px;
@@ -98,17 +105,25 @@ button {
    text-align: center;
    width: max-content;
    left: 224px;
+   top: 0px;
+}
+.text-bg1 :nth-child(1) {
+   position: relative;
+   text-align: center;
+   width: max-content;
+   left: 10px;
+   top: 40px;
 }
 .text-bg1 :nth-child(2) {
    position: relative;
    text-align: center;
    width: max-content;
    left: 270px;
-   top: 47px;
+   top: 70px;
 }
 .section1 .button-play {
    position: relative;
-   top: 110px;
+   top: 135px;
 }
 .navbar {
    z-index: 99;
@@ -118,7 +133,8 @@ button {
 .section2 {
    background-image: url("./assets/bg-image-2.jpg");
    background-repeat: no-repeat;
-   width:1440px ;
+   /* width:1440px ; */
+   width: 100%;
    height: 987px;
    z-index: 0;
    background-repeat: no-repeat, no-repeat, no-repeat;
@@ -178,7 +194,8 @@ button {
 .section3 {
    background-image: url("./assets/bg-image-3-2.png");
    background-repeat: no-repeat;
-   width:1440px ;
+   /* width:1440px ; */
+   width: 100%;
    height: 960px;
    z-index: 0;
    background-repeat: no-repeat, no-repeat, no-repeat;
@@ -260,11 +277,13 @@ button {
 }
 .section4 {
    background-image: url("./assets/bg-image-4.png");
-   width:1442px ;
+   /* width:1442px ; */
+   width: 100%;
    height: 961px;
    padding-bottom: 20px;
    background-position: 0px -1px;
    background-repeat: no-repeat, no-repeat, no-repeat;
+   background-size: cover; 
 }
 .tabel :nth-child(1) {
    position: relative;
@@ -332,43 +351,124 @@ button {
 }
 .section4 .content-table {
    position: relative;
-   bottom: 150px;
+   bottom: 0px;
 }
 .section4 h6 {
    width: max-content;
    height: max-content;
    position: relative;
-   bottom: 250px;
+   bottom: 0px;
    margin: 0px;
 }
 .content-table :nth-child(1) {
    position: relative;
    width: max-content;
    left: 138px;
-   bottom: 470px;
+   bottom: 620px;
 }
 .content-table :nth-child(2) {
    position: relative;
    width: max-content;
    left: 415px;
-   bottom: 530px;
+   bottom: 680px;
 }
 
 .content-table :nth-child(3) {
    position: relative;
    width: max-content;
    left: 138px;
-   bottom: 440px;
+   bottom: 585px;
 }
 .content-table :nth-child(4) {
    position: relative;
    width: max-content;
    left: 415px;
-   bottom: 480px;
+   bottom: 628px;
 }
 .content-table :nth-child(5) {
    position: relative;
    width: max-content;
    left: 138px;
-   bottom: 390px;
+   bottom: 540px;
+}
+.section5 {
+   background-image: url("./assets/bg-5.png");
+   height: 100vh;
+   width: 100%;
+   background-position: center; 
+   background-size: cover;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   overflow-x: hidden; 
+}
+.section5 .text-bg5 {
+   position: relative;
+   width: max-content;
+   top: 250px;
+   left: 100px;
+   font-weight: 400;
+}
+.comment-5 :nth-child(1) {
+position: relative;
+left: 750px;
+bottom: 90px;
+}
+.comment-5 :nth-child(2) {
+   position: relative;
+   left: 350px;
+   bottom: -60px;
+}
+.comment-5 :nth-child(3) {
+   position: relative;
+   left: 100px;
+   bottom: -220px;
+}
+.section6 {
+   background-color: black;
+   height: 100vh;
+   width: 100%;
+   background-position: center; 
+   background-size: cover;
+   opacity: 0.958;
+}
+.up-words h3{
+   position: relative;
+   width: max-content;
+   left: 560px;
+   bottom: 660px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 400;
+}
+.section6 h1 {
+   position: relative;
+   width: max-content;
+   left: 560px;
+   bottom: 710px;
+   font-weight: 400;
+   height: max-content;
+   margin: 0;
+}
+.section6 h6 {
+   position: relative;
+   width: max-content;
+   left: 560px;
+   bottom: 690px;
+   font-weight: 400;
+   font-size: 18px;
+   margin: 0px;
+}
+.subs {
+   background-color: orange;
+   color: black;
+   padding: 10px 20px;
+   font-size: 16px;
+   border: none;
+   cursor: pointer;
+   height: 32px;
+   width: 150px;
+   text-align: center;
+   position: relative;
+   left: 980px;   
+   bottom: 300px;
 }
