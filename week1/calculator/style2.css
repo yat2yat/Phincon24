@@ -1,27 +1,22 @@
-:root {
-
+@media screen and (max-width: 640px) {
+    .calc-header {
+        width: 80%;
+    }
+    .result {
+        width: 80%;
+    }
+    .table-grid {
+        width: 79%;
+    }
 }
-
-.calc-container {
-    position: relative;
-    left: 30%;
-    top: 0vh;
-    width: max-content;
+@media  screen and (min-width: 641px) and (max-width:1123px) {
+    .calc-header {
+        width: 70%;
+    }
+    .result {
+        width: 70%;
+    }
+    .table-grid {
+        width: 69%;
+    }
 }
-
-.table-grid {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    background-color: #2196F3;
-    padding: 10px;
-    width: 40%;
-    height: 70vh;
-    background-color: var(--table-bg);
-  }
-  .grid-item {
-    background-color: var(--number-bg);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-  }

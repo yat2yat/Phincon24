@@ -1,10 +1,73 @@
 :root {
     --clr-body-bg: #3b4664;
     --number-bg:#eae3db;
+    --number-bg-dr:#647299 ;
+    --number-bg-eq:#d13f30;
+    --text-calc: #ffff;
+    --text-theme: #ffff;
     --table-bg:#252d44;
+    --color-result:#181f32;
+    --result-clr: #ffff;
+    --font-clr-eq: #ffff;
+    --font-clr:#464a5a;
     --clr-card-bg: hsl(0 0% 100%);
     --clr-text: hsl(0 0% 15%);
     --clr-heading: hsl(0 0% 25%);
+    --bg-hover: #ffffff;
+    --del-hover:#a2b3e1;
+    --equal-hover: #f96c5b;
+    --box-shadow:#b4a49a;
+    --box-shadow-del: #414e70;
+    --box-shadow-eq:#9e291b;
+  }
+
+  .color-picker input[type="radio"]#light {
+    --radio-color: #3b4664;
+  }
+  .color-picker input[type="radio"]#theme2 {
+    --radio-color: #e6e6e6;
+  }
+  .color-picker input[type="radio"]#theme3 {
+    --radio-color: #17062a;
+  }
+  
+  :root:has(#theme2:checked) {
+    --clr-body-bg: #e6e6e6;
+    --number-bg: #e5e4e0;
+    --number-bg-dr: #388186;
+    --number-bg-eq:#c85401;
+    --table-bg:#d3cdcd;
+    --color-result:#eeeeee;
+    --font-clr:#32322a;
+    --result-clr: #32233a;
+    --text-calc: #383830;
+    --text-theme: #383830;
+    --bg-hover: #ffffff;
+    --del-hover: #62b5bd;
+    --equal-hover:#ff8a38;
+    --box-shadow: #a69e91;
+    --box-shadow-del: #225d64;
+    --box-shadow-eq:#963e04;
+  }
+  
+  :root:has(#theme3:checked) {
+    --clr-body-bg: #17062a;
+    --number-bg: #331b4d;
+    --number-bg-dr: #56077c;
+    --number-bg-eq:#00decf;
+    --table-bg:#1e0836;
+    --color-result:#1e0836;
+    --font-clr:#f3e358;
+    --text-calc: #f3e358;
+    --result-clr: #f3e358;
+    --text-theme: #f3e358;
+    --font-clr-eq: #0c2733;
+    --bg-hover: #6b34ac;
+    --del-hover: #8631b0;
+    --equal-hover:#94fff9;
+    --box-shadow: #861f9e;
+    --box-shadow-del:#b41ce6;
+    --box-shadow-eq:#77f6f1;
   }
   
   body {
@@ -23,60 +86,155 @@
     line-height: 1.1;
   }
   
-  .visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%); 
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap; 
-    width: 1px;
-  } 
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    position: relative;
+    top:4rem;
+    gap: 5%;
+}
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%); 
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+} 
+
+.color-picker {
+  border: 0;
+  display: flex; 
+  gap: 2rem;
+  width: fit-content;
+  background: #fff; 
+  padding: 7px 21px;
+  margin-inline: auto;
+  border-radius: 1rem 1rem 1rem 1rem;
+}
+
+.color-picker input[type="radio"] {
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  outline: 3px solid var(--radio-color, currentColor);
+  outline-offset: 3px;
+  border-radius: 50%;
+}
+
+.color-picker input[type="radio"]:checked {
+  background-color: var(--radio-color);
+}
+
+.calc-header h2  {
+  margin: 0px 0px 0px 0px ;
+  color: var(--text-calc);
+}
+.color-theme {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.color-theme h5 {
+  color: var(--text-theme);
+  margin: 0px 0px 0px 0px;
+  padding-top: 7px;
+}
+.calc-header {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  width: 41%;
+  margin: 0 auto;
+}
+
+.result {
+    height: 15vh;
+    width: 41%;
+    background-color: var(--color-result);
+    z-index: 88;
+    border-radius: 10px;
+}
+.result {
+  font-weight: 600;
+  font-size: 5.8rem;
+  margin: 0px 0px;
+  justify-content: end;
+  align-items: end;
+  text-align: right;
+  color: var(--result-clr);
+}
+input[type=text] {
+  border: none;
   
-  .color-picker > fieldset {
-    border: 0;
-    display: flex; 
-    gap: 2rem;
-    width: fit-content;
-    background: #fff; 
-    padding: 1rem 3rem;
-    margin-inline: auto;
-     border-radius: 0 0 1rem 1rem;
-  }
-  
-  .color-picker input[type="radio"] {
-    appearance: none;
-    width: 1.5rem;
-    height: 1.5rem;
-    outline: 3px solid var(--radio-color, currentColor);
-    outline-offset: 3px;
-    border-radius: 50%;
-  }
-  
-  .color-picker input[type="radio"]:checked {
-    background-color: var(--radio-color);
-  }
-  
-  .color-picker input[type="radio"]#light {
-    --radio-color: #3b4664;
-  }
-  .color-picker input[type="radio"]#theme2 {
-    --radio-color: #e6e6e6;
-  }
-  .color-picker input[type="radio"]#theme3 {
-    --radio-color: #17062a;
-  }
-  
-  :root:has(#theme2:checked) {
-    --clr-body-bg: #e6e6e6;
-    --number-bg: #e5e4e0;
-    --table-bg:#d3cdcd;
+}
+.table-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    background-color: #2196F3;
+    padding: 10px;
+    width: 40%;
+    height: 75vh;
+    background-color: var(--table-bg);
+    gap: 20px;
+    border-radius: 10px;
 
   }
-  
-  :root:has(#theme3:checked) {
-    --clr-body-bg: #17062a;
-    --number-bg: #331b4d;
-    --table-bg:#1e0836;
+  .grid-item {
+    background-color: var(--number-bg);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    height: 80%;
+    color: var(--font-clr);
+    padding: 0px;
+    border-radius: 8px;
+    position: relative;
+    top: 5px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    justify-items: center;
+    font-weight: 800;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 5px var(--box-shadow);
+  }
+  .grid-item:hover {
+    background-color: var(--bg-hover);
+  }
+  .del-res {
+    background-color: var(--number-bg-dr);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    text-align: center;
+    color: #ffff;
+    border: none;
+    box-shadow: 0px 5px var(--box-shadow-del);
+  }
+  .del-res:hover {
+    background-color: var(--del-hover);
+  }
+  .equal {
+    background-color: var(--number-bg-eq);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    text-align: center;
+    color: var(--font-clr-eq);
+    border: none;
+    box-shadow: 0px 5px var(--box-shadow-eq);
+  }
+  .equal:hover {
+    background-color: var(--equal-hover);
   }
 
+
+  .col-span2 {
+    grid-column: span 2 / span 2;
+  }

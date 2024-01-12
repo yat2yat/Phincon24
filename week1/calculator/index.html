@@ -9,52 +9,51 @@
     <script src="script.js"></script>
 </head>
 <body>
+    <div class="wrapper">
+        <div class="calc-header">
+            <h2>Calc</h2>
 
-      
-      <main>
-        <div class="calc-container">
             <div class="color-theme">
+                <h5>THEME</h5>
                 <form class="color-picker" action="">
-                    <fieldset>
-                      <legend class="visually-hidden">Pick a color scheme</legend>
-                      <label for="light" class="visually-hidden">Light</label>
+                      <legend class="visually-hidden">Pick a scheme</legend>
+                      <label for="light" class="visually-hidden">theme1</label>
                       <input type="radio" name="theme" id="light" checked>
                   
-                      <label for="pink" class="visually-hidden">Pink theme</label>
+                      <label for="pink" class="visually-hidden">theme2</label>
                       <input type="radio" id="theme2" name="theme">
                   
-                      <label for="blue" class="visually-hidden">Blue theme</label>
+                      <label for="blue" class="visually-hidden">theme3</label>
                       <input type="radio" id="theme3" name="theme">
                     </fieldset>
-                  </form>
             </div>
-        </div>>
-            <div class="result">
-
+        </div>
+            <div class="result" id="display">
+                0
             </div>
             <div class="table-grid">
-                <div class="grid-item">1</div>
-                <div class="grid-item">2</div>
-                <div class="grid-item">3</div>  
-                <div class="grid-item">del</div>
-                <div class="grid-item">4</div>
-                <div class="grid-item">5</div>  
-                <div class="grid-item">6</div>
-                <div class="grid-item">+</div>
-                <div class="grid-item">7</div>  
-                <div class="grid-item">8</div>
-                <div class="grid-item">9</div>
-                <div class="grid-item">-</div>  
-                <div class="grid-item">.</div>  
-                <div class="grid-item">0</div>
-                <div class="grid-item">/</div>
-                <div class="grid-item">x</div> 
-                <div class="grid-item">reset</div>
-                <div class="grid-item">=</div> 
+                <div class="grid-item" onclick="Display('7')">7</div>
+                <div class="grid-item" onclick="Display('8')">8</div>
+                <div class="grid-item" onclick="Display('9')">9</div>  
+                <div class="grid-item del-res" onclick="clearLastElement()">Del</div>
+                <div class="grid-item" onclick="Display('4')">4</div>
+                <div class="grid-item" onclick="Display('5')">5</div>  
+                <div class="grid-item" onclick="Display('6')">6</div>
+                <div class="grid-item" onclick="Display('+')">+</div>
+                <div class="grid-item" onclick="Display('1')">1</div>  
+                <div class="grid-item" onclick="Display('2')">2</div>
+                <div class="grid-item" onclick="Display('3')">3</div>
+                <div class="grid-item" onclick="Display('-')">-</div>  
+                <div class="grid-item" onclick="Display('.')">.</div>  
+                <div class="grid-item" onclick="Display('0')">0</div>
+                <div class="grid-item" onclick="Display('/')">/</div>
+                <div class="grid-item" onclick="Display('*')">x</div> 
+                <div class="grid-item del-res col-span2" onclick="clearDisplay()">Reset</div>
+                <div class="grid-item equal col-span2" onclick="calculateResult()">=</div> 
             </div>
 
-        </div>
+        
 
-      </main>
+    </div>
 </body>
 </html>
