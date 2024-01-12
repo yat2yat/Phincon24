@@ -1,0 +1,82 @@
+:root {
+    --clr-body-bg: #3b4664;
+    --number-bg:#eae3db;
+    --table-bg:#252d44;
+    --clr-card-bg: hsl(0 0% 100%);
+    --clr-text: hsl(0 0% 15%);
+    --clr-heading: hsl(0 0% 25%);
+  }
+  
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    background: var(--clr-body-bg);
+    color: var(--clr-text);
+  }
+  
+  h1,
+  h2,
+  h3 {
+    color: var(--clr-heading);
+    line-height: 1.1;
+  }
+  
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%); 
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  } 
+  
+  .color-picker > fieldset {
+    border: 0;
+    display: flex; 
+    gap: 2rem;
+    width: fit-content;
+    background: #fff; 
+    padding: 1rem 3rem;
+    margin-inline: auto;
+     border-radius: 0 0 1rem 1rem;
+  }
+  
+  .color-picker input[type="radio"] {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    outline: 3px solid var(--radio-color, currentColor);
+    outline-offset: 3px;
+    border-radius: 50%;
+  }
+  
+  .color-picker input[type="radio"]:checked {
+    background-color: var(--radio-color);
+  }
+  
+  .color-picker input[type="radio"]#light {
+    --radio-color: #3b4664;
+  }
+  .color-picker input[type="radio"]#theme2 {
+    --radio-color: #e6e6e6;
+  }
+  .color-picker input[type="radio"]#theme3 {
+    --radio-color: #17062a;
+  }
+  
+  :root:has(#theme2:checked) {
+    --clr-body-bg: #e6e6e6;
+    --number-bg: #e5e4e0;
+    --table-bg:#d3cdcd;
+
+  }
+  
+  :root:has(#theme3:checked) {
+    --clr-body-bg: #17062a;
+    --number-bg: #331b4d;
+    --table-bg:#1e0836;
+  }
+

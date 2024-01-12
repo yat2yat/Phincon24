@@ -1,0 +1,27 @@
+:root {
+
+}
+
+.calc-container {
+    position: relative;
+    left: 30%;
+    top: 0vh;
+    width: max-content;
+}
+
+.table-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+    width: 40%;
+    height: 70vh;
+    background-color: var(--table-bg);
+  }
+  .grid-item {
+    background-color: var(--number-bg);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
