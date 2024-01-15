@@ -1,0 +1,41 @@
+@import '../styles/base.scss';
+
+.body {
+  margin: 0;
+}
+
+.container {
+  background-color: #211d2b;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  .tittle {
+    color: white;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .image {
+    height: 100vh ;
+    max-height: 960px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .image2 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1; 
+  }
+}
